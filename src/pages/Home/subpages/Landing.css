@@ -1,6 +1,6 @@
 #NameTitle {
   font-size: 12vw;
-  margin-top: 0;
+  margin: 0;
 }
 
 #NameSubtitle {
@@ -10,11 +10,18 @@
 }
 
 #NameIntro {
+  margin: auto;
+  width: 50%;
+  text-align: left;
   font-size: 3vw;
   margin-bottom: 0;
 }
 
 .landing {
-  margin-top: 30vh;
-  margin-bottom: 46vh;
+  margin-top: 40%;
+  margin-bottom: 50%;
+}
+
+#Home {
+  border-style: solid;
 }

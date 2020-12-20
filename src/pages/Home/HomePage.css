@@ -1,14 +1,9 @@
-.HomePage-wrapper {
-}
-
-#NameTitle {
-  /* font-size: 100px; */
-}
-
-#NameSubtitle {
-}
-
 .SectionHeader {
+  margin: auto;
+  width: 100%;
+  padding-left: 1vw;
+  text-align: left;
+  font-size: 40px;
 }
 
 .Spacer {
@@ -17,9 +12,16 @@
 
 .SectionText {
   margin: auto;
-  width: 50%;
-  padding: 10px;
-  font-size: 4vw;
-  /* border: #6da05f solid 1px; */
+  padding: 2px;
+  font-size: 20px;
   text-align: left;
+  color: black;
+  font-weight: normal;
+}
+
+.Section {
+  width: 75%;
+  margin: auto;
+  margin-top: 20%;
+  /* margin-bottom: 20%; */
 }

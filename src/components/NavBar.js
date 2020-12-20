@@ -20,17 +20,17 @@ function NavBar({ location }) {
       </button>
       <ul className={expanded ? 'show-nav' : 'nav-links'}>
         <li>
-          <a className="boldText" href="/">
+          <a className="boldText" href="#Home">
             Home
           </a>
         </li>
         <li>
-          <a className="boldText" href="/#about">
+          <a className="boldText" href="/#About">
             About
           </a>
         </li>
         <li>
-          <a className="boldText" href="/#projects">
+          <a className="boldText" href="/#Projects">
             Projects
           </a>
         </li>
