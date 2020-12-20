@@ -1,18 +1,24 @@
 import './App.css'
 import React from 'react'
-import { Router, Route, Link } from 'react-router-dom'
-import LandingPage from './pages/HomePage'
-import { createBrowserHistory as createHistory } from 'history'
-import TopBar from './TopBar'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import HomePage from './pages/Home/HomePage'
+import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 
-const history = createHistory()
+//love this website
+//https://brittanychiang.com/
+
+//https://designcode.io/react-hooks-toggle-menu-with-usestate
 
 function App() {
   return (
     <div className="App">
-      <Router history={history}>
-        <TopBar />
-        <Route path="/" exact component={LandingPage} />
+      <Router>
+        <NavBar />
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+        </Switch>
+        <Footer />
       </Router>
     </div>
   )
