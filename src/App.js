@@ -1,8 +1,8 @@
 import './App.css'
 import React from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
-import HomePage from './pages/Home/HomePage'
-import NavBar from './components/NavBar'
+import HomePage from './pages/HomePage'
+import NavBar from './components/Navbar'
 import Footer from './components/Footer'
 
 //love this website

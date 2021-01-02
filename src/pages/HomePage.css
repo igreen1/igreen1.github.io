@@ -6,10 +6,6 @@
   font-size: 40px;
 }
 
-.Spacer {
-  margin-top: 10px;
-}
-
 .SectionText {
   margin: auto;
   padding: 2px;
@@ -20,8 +16,5 @@
 }
 
 .Section {
-  width: 75%;
-  margin: auto;
-  margin-top: 20%;
-  /* margin-bottom: 20%; */
+  max-width: 100%;
 }

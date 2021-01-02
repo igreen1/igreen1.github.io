@@ -1,0 +1,50 @@
+.ProjectSection {
+  display: flexbox;
+  margin-bottom: 20%;
+  min-height: 30vh;
+}
+
+.GithubLink {
+  font-size: 150px;
+  margin-right: 30px;
+  color: black;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  float: right;
+  display: none;
+}
+
+.TitleCard {
+  width: 50%;
+}
+
+.ProjectName {
+  margin-bottom: 0px;
+  font-size: 35px;
+}
+
+.ProjectSubtitle {
+  margin-top: 0px;
+}
+
+.ProjectImage {
+  max-width: 50%;
+}
+
+.ProjectDescription {
+  background-color: rgba(205, 205, 205, 1);
+  border-radius: 8px;
+  /* float: right; */
+  width: 140%;
+  text-align: justify;
+  position: relative;
+  /* float: none; */
+  z-index: 5;
+}
+
+/* .ProjectDescriptionContainer {
+  background-color: red;
+  float: right;
+} */

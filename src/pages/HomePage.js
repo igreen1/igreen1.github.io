@@ -1,18 +1,17 @@
 import React from 'react'
 import './HomePage.css'
 
-import Landing from './subpages/Landing'
-import About from './subpages/About'
-import Projects from './subpages/Projects'
+import Landing from './homepage/Landing'
+import About from './homepage/About'
+import Projects from './homepage/Projects'
+import Spacer from '../components/Spacer'
 
 const HomePage = () => {
   return (
     <div className="HomePage">
-      <div className="Spacer"></div>
       <Landing />
-
+      <Spacer space="2" unit="vh" />
       <About />
-
       <Projects />
     </div>
   )
