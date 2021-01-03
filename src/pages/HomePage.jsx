@@ -1,8 +1,6 @@
 import React from 'react'
 import './HomePage.css'
 
-import { FiGithub, FiExternalLink } from 'react-icons/fi'
-
 import Landing from './homepage/Landing'
 import About from './homepage/About'
 import Projects from './homepage/Projects'

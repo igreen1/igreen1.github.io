@@ -1,0 +1,8 @@
+.FooterButton {
+  font-size: 30px;
+  color: black;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
