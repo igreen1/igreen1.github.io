@@ -6,6 +6,12 @@
   font-size: 40px;
 }
 
+.visible {
+  animation-timing-function: linear;
+  animation-name: slideup;
+  animation-duration: 0.6s;
+}
+
 .SectionText {
   margin: auto;
   padding: 2px;
@@ -17,4 +23,21 @@
 
 .Section {
   max-width: 100%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    padding-top: 1vh;
+  }
+  30% {
+    opacity: 0;
+    padding-top: 1vh;
+  }
+  100% {
+    opacity: 100;
+    padding-top: 0vh;
+  }
 }

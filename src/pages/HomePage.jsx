@@ -1,6 +1,8 @@
 import React from 'react'
 import './HomePage.css'
 
+import { FiGithub, FiExternalLink } from 'react-icons/fi'
+
 import Landing from './homepage/Landing'
 import About from './homepage/About'
 import Projects from './homepage/Projects'
@@ -10,8 +12,9 @@ const HomePage = () => {
   return (
     <div className="HomePage">
       <Landing />
-      <Spacer space="2" unit="vh" />
+      <Spacer id="About" space="5" unit="vh" />
       <About />
+      <Spacer id="Projects" space="5" unit="vh" />
       <Projects />
     </div>
   )

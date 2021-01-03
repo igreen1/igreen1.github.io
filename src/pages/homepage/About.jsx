@@ -18,7 +18,7 @@ function About() {
   })
 
   return (
-    <div ref={ref} className="Section" id="About">
+    <div ref={ref} className="Section About">
       {isVisible && (
         <div className={isVisible ? 'visible' : ''}>
           <h1 className={'SectionHeader'}>About</h1>

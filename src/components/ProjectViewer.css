@@ -1,19 +1,20 @@
 .ProjectSection {
   display: flexbox;
-  margin-bottom: 20%;
+  margin-bottom: 10vh;
   min-height: 30vh;
 }
 
-.GithubLink {
-  font-size: 150px;
-  margin-right: 30px;
+.LinkContainer {
+  text-align: center;
+  margin: auto;
+}
+.LinkButton {
+  font-size: 30px;
   color: black;
   background: transparent;
   border: none;
   cursor: pointer;
   outline: none;
-  float: right;
-  display: none;
 }
 
 .TitleCard {
@@ -34,17 +35,10 @@
 }
 
 .ProjectDescription {
-  background-color: rgba(205, 205, 205, 1);
+  background-color: rgba(230, 230, 230, 0.97);
   border-radius: 8px;
-  /* float: right; */
   width: 140%;
-  text-align: justify;
+  text-align: center;
   position: relative;
-  /* float: none; */
   z-index: 5;
 }
-
-/* .ProjectDescriptionContainer {
-  background-color: red;
-  float: right;
-} */

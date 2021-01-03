@@ -1,9 +1,6 @@
 #Name {
   font-size: 12vh;
   margin: 0;
-  animation-timing-function: ease-in;
-  animation-name: slideup;
-  animation-duration: 1.2s;
 }
 
 .TextContainer {
@@ -15,39 +12,36 @@
   color: gray;
   font-size: 5vh;
   margin-top: 0;
-  animation-timing-function: ease-in;
-  animation-name: slideup;
-  animation-duration: 1.4s;
 }
 
 #NameIntro {
-  padding-left: 8.5vh;
+  padding-left: 8.5vw;
   width: 100%;
   text-align: left;
   font-size: 3vh;
   margin-bottom: 0;
-  animation-timing-function: ease-in;
-  animation-name: slideup;
-  animation-duration: 0.75s;
 }
 
 .landing {
   padding-top: 25vh;
-  padding-bottom: 40vh;
+  /* padding-bottom: 40vh; */
+  height: 66vh;
   /* margin-top: 60px; */
 }
+.visible #Name {
+  animation-timing-function: ease-in;
+  animation-name: slideup;
+  animation-duration: 0.8s;
+}
 
-@keyframes slideup {
-  0% {
-    opacity: 0;
-    margin-top: 5%;
-  }
-  50% {
-    opacity: 0;
-    margin-top: 5%;
-  }
-  100% {
-    opacity: 100;
-    margin-top: 0;
-  }
+.visible #NameSubtitle {
+  animation-timing-function: ease-in;
+  animation-name: slideup;
+  animation-duration: 1s;
+}
+
+.visible #NameIntro {
+  animation-timing-function: ease-in;
+  animation-name: slideup;
+  animation-duration: 0.35s;
 }
