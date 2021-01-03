@@ -1,0 +1,43 @@
+.OverlayButton {
+  font-size: 30px;
+  color: black;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding-bottom: 10px;
+}
+
+.LeftBar {
+  position: fixed;
+  display: list-item;
+  list-style: none;
+  bottom: 0;
+  left: 10px;
+  right: auto;
+  z-index: 1;
+  font-size: 20px;
+}
+
+.Email {
+  writing-mode: vertical-rl;
+  padding-bottom: 15px;
+}
+
+.RightBar {
+  position: fixed;
+  display: list-item;
+  list-style: none;
+  bottom: 0;
+  left: auto;
+  right: 15px;
+  z-index: 1;
+  font-size: 20px;
+}
+
+.VerticalLine {
+  writing-mode: sideways-lr;
+  border-right: 6px solid black;
+  width: 20px;
+  height: 10vh;
+}

@@ -7,6 +7,7 @@ import Landing from './homepage/Landing'
 import About from './homepage/About'
 import Projects from './homepage/Projects'
 import Spacer from '../components/Spacer'
+import Overlay from '../components/Overlay'
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
       <About />
       <Spacer id="Projects" space="5" unit="vh" />
       <Projects />
+      <Overlay />
     </div>
   )
 }
