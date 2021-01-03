@@ -27,7 +27,7 @@ export default function Projects() {
       ref={ref}
       className="Section"
       id="ProjectSection"
-      style={{ height: `${projectList.projects.length * 43.6}vh` }}
+      style={{ height: `${projectList.projects.length * 46}vh` }}
     >
       {isVisible && (
         <div className={isVisible ? 'visible' : ''}>

@@ -3,6 +3,7 @@
   margin-bottom: 10vh;
   padding-bottom: 20px;
   min-height: 30vh;
+  max-height: 40vh;
 }
 
 .LinkContainer {
@@ -33,6 +34,7 @@
 
 .ProjectImage {
   max-width: 50%;
+  max-height: 30vh;
 }
 
 .ProjectDescription {

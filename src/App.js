@@ -8,7 +8,6 @@ import Retro from './pages/Retro'
 
 import './funStyles/weather.css'
 import './funStyles/rave.css'
-import './funStyles/retro.css'
 
 //love this website
 //https://brittanychiang.com/
