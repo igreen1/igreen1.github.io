@@ -1,6 +1,6 @@
 import './App.css'
 import React from 'react'
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* <Navbar /> */}
+        <Navbar />
         <Switch>
           <Route path="/" exact component={HomePage} />
         </Switch>
