@@ -14,24 +14,24 @@ function Navbar(props) {
 
   return (
     <div id="Header">
-      <div id="Navbar">
-        <button onClick={() => toggle()} id="ExpandNavbar">
-          <FaAlignRight />
-        </button>
-        <ul className={expanded ? 'NavbarList show-nav' : 'NavbarList'}>
-          {pageList.map((page) => {
-            return (
-              <li key={page.name} className="NavbarListItem">
-                <a
-                  className="InlineLink"
-                  href={page.link ? page.link : '/' + page.name}
-                >
-                  {page.name}
-                </a>
-              </li>
-            )
-          })}
-        </ul>
+      <button onClick={() => toggle()} id="ExpandNavbar">
+        <FaAlignRight />
+      </button>
+      <div className={expanded ? 'NavbarList show-nav' : 'NavbarList'}>
+        {pageList.map((page) => {
+          return (
+            // <li key={page.name} className="NavbarListItem">
+            <button className="InlineButton">
+              <a
+                className="InlineLink"
+                href={page.link ? page.link : '/' + page.name}
+              >
+                {page.name}
+              </a>
+            </button>
+            // </li>
+          )
+        })}
       </div>
     </div>
   )
@@ -49,6 +49,10 @@ const pageList = [
   {
     name: 'Projects',
     link: '#Projects',
+  },
+  {
+    name: 'More',
+    link: '#More',
   },
 ]
 

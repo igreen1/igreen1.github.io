@@ -4,8 +4,9 @@ import './Footer.css'
 import { FiCloudSnow, FiCloudRain } from 'react-icons/fi'
 import { GiPartyPopper } from 'react-icons/gi'
 import { SiRetroarch } from 'react-icons/si'
+import { RiLightbulbFlashLine } from 'react-icons/ri'
 
-function Footer({ setWeather, toggleRave, toggleRetro }) {
+function Footer({ setWeather, toggleRave, toggleRetro, toggleColor }) {
   return (
     <div>
       <div className="FooterButtons">

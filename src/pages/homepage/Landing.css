@@ -28,20 +28,23 @@
   height: 66vh;
   /* margin-top: 60px; */
 }
-.visible #Name {
-  animation-timing-function: ease-in;
-  animation-name: slideup;
-  animation-duration: 0.8s;
-}
 
-.visible #NameSubtitle {
-  animation-timing-function: ease-in;
-  animation-name: slideup;
-  animation-duration: 1s;
-}
+@media (prefers-reduced-motion: no-preference) {
+  .visible #Name {
+    animation-timing-function: ease-in;
+    animation-name: slideup;
+    animation-duration: 0.8s;
+  }
 
-.visible #NameIntro {
-  animation-timing-function: ease-in;
-  animation-name: slideup;
-  animation-duration: 0.35s;
+  .visible #NameSubtitle {
+    animation-timing-function: ease-in;
+    animation-name: slideup;
+    animation-duration: 1s;
+  }
+
+  .visible #NameIntro {
+    animation-timing-function: ease-in;
+    animation-name: slideup;
+    animation-duration: 0.35s;
+  }
 }
