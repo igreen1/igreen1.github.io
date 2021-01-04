@@ -40,19 +40,19 @@ function Navbar(props) {
 const pageList = [
   {
     name: 'Home',
-    link: '#Home',
+    link: '/#Home',
   },
   {
     name: 'About',
-    link: '#About',
+    link: '/#About',
   },
   {
     name: 'Projects',
-    link: '#Projects',
+    link: '/#Projects',
   },
   {
     name: 'More',
-    link: '#More',
+    link: '/#More',
   },
 ]
 

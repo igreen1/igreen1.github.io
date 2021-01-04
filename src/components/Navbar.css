@@ -54,7 +54,7 @@
   margin-bottom: 70px;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 700px) {
   .InlineButton {
     padding-right: 20px;
     height: 100%;

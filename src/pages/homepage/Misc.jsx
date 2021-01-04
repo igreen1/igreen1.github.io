@@ -44,8 +44,8 @@ export default function Misc() {
                 <VerticalProjectContainer
                   name={item.name}
                   description={item.description}
-                  image={item.image ? '/images/' + item.image : undefined}
-                  imageLink={item?.imageLink}
+                  // image={item.image ? '/images/' + item.image : undefined}
+                  // imageLink={item?.imageLink}
                   link={item.link}
                 />
               </div>

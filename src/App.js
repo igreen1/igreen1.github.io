@@ -8,6 +8,7 @@ import Retro from './pages/Retro'
 
 import './funStyles/weather.css'
 import './funStyles/rave.css'
+import ElectricalEngineering from './pages/ElectricalEngineering'
 
 //love this website
 //https://brittanychiang.com/
@@ -47,6 +48,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={HomePage} />
+          <Route path="/ee" component={ElectricalEngineering} />
         </Switch>
         <Footer
           setWeather={setRainOrSnow}

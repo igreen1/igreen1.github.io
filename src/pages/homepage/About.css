@@ -1,5 +1,11 @@
-.About {
+/* .About {
   height: 33vh;
+} */
+
+@media (prefers-reduced-motion: no-preference) {
+  .About {
+    visibility: hidden;
+  }
 }
 
 #AboutIntro {

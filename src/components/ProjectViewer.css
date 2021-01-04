@@ -1,16 +1,10 @@
-.ProjectSection {
-  display: flexbox;
-  margin-bottom: 10vh;
-  padding-bottom: 20px;
-  min-height: 30vh;
-  max-height: 40vh;
+.ProjectViewerSection {
+  /* margin-bottom: 5vh; */
+  /* height: 400px; */
+  height: auto;
+  margin: auto;
+  margin-bottom: 50px;
 }
-
-/* .ProjectSection:hover {
-  transform: scale(1.2);
-  background-color: #e0e0e0;
-  padding: 30px;
-} */
 
 .LinkContainer {
   text-align: center;
@@ -26,7 +20,8 @@
 }
 
 .TitleCard {
-  width: 50%;
+  width: 90%;
+  padding: 10px;
 }
 
 .ProjectName {
@@ -39,15 +34,33 @@
 }
 
 .ProjectImage {
-  max-width: 50%;
-  max-height: 30vh;
+  float: right;
+  max-width: 98%;
+  max-height: 400px;
+  margin: auto;
   border-radius: 15px;
+}
+.ProjectViewer {
+  display: grid;
+  grid-template-columns: 50% 50% auto;
+}
+
+@media screen and (max-width: 800px) {
+  .ProjectImage {
+    display: none;
+  }
+  .ProjectViewer {
+    display: inline;
+  }
+  .ProjectViewerSection {
+    padding-left: 30px;
+  }
 }
 
 .ProjectDescription {
-  background-color: rgba(230, 230, 230, 0.97);
   border-radius: 8px;
-  width: 140%;
+  padding: 0px;
+  width: 100%;
   text-align: center;
   position: relative;
   z-index: 5;

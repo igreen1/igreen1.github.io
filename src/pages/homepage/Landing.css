@@ -1,48 +1,52 @@
 #Name {
-  font-size: 12vh;
+  font-size: 12vmin;
   margin: 0;
 }
 
 .TextContainer {
   margin: auto;
-  width: 70vh;
+  width: 70vmin;
 }
 
 #NameSubtitle {
   color: gray;
-  font-size: 5vh;
+  font-size: 5vmin;
   margin-top: 0;
 }
 
 #NameIntro {
-  padding-left: 8.5vw;
+  padding-left: 4%;
   width: 100%;
   text-align: left;
-  font-size: 3vh;
+  font-size: 3vmin;
   margin-bottom: 0;
 }
 
 .landing {
   padding-top: 25vh;
-  /* padding-bottom: 40vh; */
   height: 66vh;
-  /* margin-top: 60px; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .landing {
+    visibility: hidden;
+  }
   .visible #Name {
+    visibility: visible;
     animation-timing-function: ease-in;
     animation-name: slideup;
     animation-duration: 0.8s;
   }
 
   .visible #NameSubtitle {
+    visibility: visible;
     animation-timing-function: ease-in;
     animation-name: slideup;
     animation-duration: 1s;
   }
 
   .visible #NameIntro {
+    visibility: visible;
     animation-timing-function: ease-in;
     animation-name: slideup;
     animation-duration: 0.35s;

@@ -12,13 +12,14 @@ const HomePage = () => {
   return (
     <div className="HomePage">
       <Landing />
-      <Spacer id="About" space="5" unit="vh" />
+      <Spacer id="About" space="50" unit="px" />
       <About />
-      <Spacer id="Projects" space="5" unit="vh" />
+      <Spacer id="Projects" space="50" unit="px" />
       <Projects />
-      <Spacer id="More" space="5" unit="vh" />
+      <Spacer id="More" space="20" unit="px" />
       <Misc />
       <Overlay />
+      <Spacer id="More" space="20" unit="px" />
     </div>
   )
 }

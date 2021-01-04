@@ -27,35 +27,33 @@ export default function Projects() {
       ref={ref}
       className="Section"
       id="ProjectSection"
-      style={{ height: `${projectList.projects.length * 42}vh` }}
+      // style={{ height: `${(projectList.projects.length + 1) * 40}vmin` }}
     >
-      {isVisible && (
-        <div className={isVisible ? 'visible' : ''}>
-          <h1
-            className="SectionHeader"
-            id="ProjectHeader"
-            style={{ textAlign: 'center' }}
-          >
-            Projects
-          </h1>
-          {projectList.projects.map((project) => {
-            return (
-              <ProjectViewer
-                name={project.name}
-                key={project.name}
-                description={project.description}
-                subtitle={project.subtitle}
-                side={i++ % 2 === 0 ? 'left' : 'right'}
-                // Below: not entirely required but.... just do it
-                github={project?.github}
-                website={project?.website}
-                image={project?.image}
-                skills={project?.skills}
-              />
-            )
-          })}
-        </div>
-      )}
+      <div className={isVisible ? 'visible' : ''}>
+        <h1
+          className="SectionHeader"
+          id="ProjectHeader"
+          style={{ textAlign: 'center' }}
+        >
+          Projects
+        </h1>
+        {projectList.projects.map((project) => {
+          return (
+            <ProjectViewer
+              name={project.name}
+              key={project.name}
+              description={project.description}
+              subtitle={project.subtitle}
+              side={i++ % 2 === 0 ? 'left' : 'right'}
+              // Below: not entirely required but.... just do it
+              github={project?.github}
+              website={project?.website}
+              image={project?.image}
+              skills={project?.skills}
+            />
+          )
+        })}
+      </div>
     </div>
   )
 }
