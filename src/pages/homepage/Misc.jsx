@@ -1,5 +1,4 @@
 import React from 'react'
-import './Misc.css'
 
 import useIntersectionObserver from '../../hooks/use-intersection-observer'
 import VerticalProjectContainer from '../../components/VerticalProjectContainer'
@@ -25,13 +24,7 @@ export default function Misc() {
   return (
     <div className="Section" ref={ref}>
       <div className={isVisible ? 'visible' : ''}>
-        <h1
-          style={{
-            fontSize: '40px',
-          }}
-        >
-          More
-        </h1>
+        <h1 className="SectionHeaderCenter">More</h1>
         <p className="SectionText" style={{ textAlign: 'center' }}>
           It's difficult to summarize myself in just one page of a website. So
           look at some more information about me to get a better picture

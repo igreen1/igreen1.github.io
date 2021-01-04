@@ -4,6 +4,7 @@
   height: auto;
   margin: auto;
   margin-bottom: 50px;
+  max-width: 1000px;
 }
 
 .LinkContainer {
@@ -42,7 +43,7 @@
 }
 .ProjectViewer {
   display: grid;
-  grid-template-columns: 50% 50% auto;
+  grid-template-columns: 50% 50%;
 }
 
 @media screen and (max-width: 800px) {
@@ -52,8 +53,8 @@
   .ProjectViewer {
     display: inline;
   }
-  .ProjectViewerSection {
-    padding-left: 30px;
+  .TitleCard {
+    width: 100%;
   }
 }
 

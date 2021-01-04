@@ -34,9 +34,6 @@ function ProjectViewer({
 
   //because of alternating sides
   if (!side || !(side === 'right' || side === 'left')) side = 'left'
-  const flipSide = () => {
-    return side === 'right' ? 'left' : 'right'
-  }
 
   return (
     <div id={name} ref={ref} className="ProjectViewerSection">

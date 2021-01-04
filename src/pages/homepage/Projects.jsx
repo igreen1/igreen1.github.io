@@ -31,7 +31,7 @@ export default function Projects() {
     >
       <div className={isVisible ? 'visible' : ''}>
         <h1
-          className="SectionHeader"
+          className="SectionHeaderCenter"
           id="ProjectHeader"
           style={{ textAlign: 'center' }}
         >

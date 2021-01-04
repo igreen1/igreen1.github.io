@@ -7,6 +7,7 @@ import Projects from './homepage/Projects'
 import Spacer from '../components/Spacer'
 import Overlay from '../components/Overlay'
 import Misc from './homepage/Misc'
+import Contact from './homepage/Contact'
 
 const HomePage = () => {
   return (
@@ -19,7 +20,9 @@ const HomePage = () => {
       <Spacer id="More" space="20" unit="px" />
       <Misc />
       <Overlay />
-      <Spacer id="More" space="20" unit="px" />
+      <Spacer id="Contact" space="40" unit="px" />
+      <Contact />
+      <Spacer space="20" unit="px" />
     </div>
   )
 }

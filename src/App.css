@@ -3,6 +3,11 @@
   background-color: #efefef;
 }
 
+.Color1 {
+  background-color: #aaa;
+  color: #aaa;
+}
+
 .weather {
   background-color: rgba(50, 50, 50, 0.3);
 }

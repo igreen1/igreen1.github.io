@@ -6,6 +6,28 @@
   font-size: 40px;
 }
 
+.SectionHeaderCenter {
+  margin: auto;
+  text-align: center;
+  font-size: 40px;
+}
+
+.FlatButton {
+  margin: 0px;
+  height: 100%;
+  margin-left: 0%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  color: black;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  list-style: none;
+}
+
 .InlineButton {
   margin: 0px;
   width: 100%;
@@ -54,11 +76,11 @@
   padding-left: 10%;
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 800px) {
   img {
     display: none;
   }
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .visible {

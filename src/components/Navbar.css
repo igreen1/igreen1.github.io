@@ -33,11 +33,11 @@
   height: 0;
   overflow: hidden;
   text-align: center;
+  margin: auto;
 }
 
 .InlineButton {
   height: 25%;
-  padding-right: 60px;
 }
 
 .show-nav {
@@ -71,6 +71,7 @@
   .NavbarList {
     height: auto;
     display: flex;
+    margin: 0;
   }
   .NavbarListItem {
     padding: 0 15px;

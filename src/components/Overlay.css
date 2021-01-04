@@ -41,3 +41,12 @@
   width: 20px;
   height: 10vh;
 }
+
+@media screen and (max-width: 600px) {
+  .RightBar {
+    display: none;
+  }
+  .LeftBar {
+    display: none;
+  }
+}
