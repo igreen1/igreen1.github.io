@@ -50,10 +50,10 @@ const pageList = [
     name: 'Projects',
     link: '/#Projects',
   },
-  {
-    name: 'More',
-    link: '/#More',
-  },
+  // {
+  //   name: 'More',
+  //   link: '/#More',
+  // },
   {
     name: 'Contact',
     link: '/#Contact',

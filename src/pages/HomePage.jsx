@@ -17,8 +17,8 @@ const HomePage = () => {
       <About />
       <Spacer id="Projects" space="50" unit="px" />
       <Projects />
-      <Spacer id="More" space="20" unit="px" />
-      <Misc />
+      {/* <Spacer id="More" space="20" unit="px" />
+      <Misc /> */}
       <Overlay />
       <Spacer id="Contact" space="40" unit="px" />
       <Contact />
