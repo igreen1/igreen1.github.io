@@ -3,7 +3,7 @@
   color: blue;
   text-shadow: 0 0 3px #ff0000, 0 0 3px #0000ff;
   background-image: url('https://cutewallpaper.org/21/wallpaper-for-website/Seamless-abstract-geometric-pattern-fashion-80-90s.-It-can-be-used-in-printing,-website-background-and-fabric-design-Wallpaper-Vinyl-custom-made.jpg');
-  height: 100vh;
+  min-height: 100vh;
   margin-top: -30px;
 }
 
