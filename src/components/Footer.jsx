@@ -1,16 +1,22 @@
 import React from 'react'
-import './Footer.css'
+import './Footer.scss'
 
 import { FiCloudSnow, FiCloudRain } from 'react-icons/fi'
 import { GiPartyPopper } from 'react-icons/gi'
 import { SiRetroarch } from 'react-icons/si'
-// import { RiLightbulbFlashLine } from 'react-icons/ri'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
-function Footer({ setWeather, toggleRave, toggleRetro, toggleColor }) {
+function Footer({ setWeather }) {
   return (
-    <div>
-      <div className="FooterLinks">
+    <React.Fragment>
+      <div
+        style={{
+          borderBottom: '1px solid black',
+          marginBottom: '20px',
+          width: '200px',
+          margin: 'auto'
+        }}
+        className="FooterLinks">
         <button className="FooterButton">
           <a href={'https://github.com/igreen1'} className="InlineLink">
             <FaGithub />
@@ -25,33 +31,24 @@ function Footer({ setWeather, toggleRave, toggleRetro, toggleColor }) {
           </a>
         </button>
       </div>
-      <div
-        style={{
-          borderBottom: '1px solid black',
-          marginBottom: '20px',
-          width: '200px',
-          margin: 'auto',
+      <p>Designed and built (from scratch) by Ian Green</p>
+      <button
+        className="FooterButton"
+        onClick={() => {
+          setWeather('snow')
         }}
-      ></div>
-      <div className="FooterButtons">
-        <p>Designed and built (from scratch) by Ian Green</p>
-        <button
-          className="FooterButton"
-          onClick={() => {
-            setWeather('snow')
-          }}
-        >
-          <FiCloudSnow />
-        </button>
-        <button
-          className="FooterButton"
-          onClick={() => {
-            setWeather('rain')
-          }}
-        >
-          <FiCloudRain />
-        </button>
-        <button
+      >
+        <FiCloudSnow />
+      </button>
+      <button
+        className="FooterButton"
+        onClick={() => {
+          setWeather('rain')
+        }}
+      >
+        <FiCloudRain />
+      </button>
+      {/*
           className="FooterButton"
           onClick={() => {
             toggleRave()
@@ -66,9 +63,8 @@ function Footer({ setWeather, toggleRave, toggleRetro, toggleColor }) {
           }}
         >
           <SiRetroarch />
-        </button>
-      </div>
-    </div>
+        </button> */}
+    </React.Fragment>
   )
 }
 export default Footer

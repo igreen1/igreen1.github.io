@@ -1,63 +1,56 @@
-import './App.css'
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import HomePage from './pages/HomePage'
+
+import './App.scss';
+import Homepage from './pages/Homepage'
 import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Retro from './pages/Retro'
-
-import './funStyles/weather.css'
-import './funStyles/rave.css'
-import ElectricalEngineering from './pages/ElectricalEngineering'
-
-//love this website
-//https://brittanychiang.com/
-
-//https://designcode.io/react-hooks-toggle-menu-with-usestate
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
 function App() {
-  const [weather, setWeather] = React.useState('')
-  const [rave, setRave] = React.useState(false)
-  const toggleRave = () => {
-    if (!rave && window.confirm('Warning EPILEPSY: Click OK to continue'))
-      setRave(!rave)
-    else if (rave) setRave(!rave)
-  }
-
-  //TODO
-  const [retro, setRetro] = React.useState(false)
-  const toggleRetro = () => {
-    setRetro(!retro)
-  }
-
-  const setRainOrSnow = (newWeather) => {
-    if (newWeather === weather) setWeather('')
-    else if (newWeather === 'rain') setWeather('rain')
-    else if (newWeather === 'snow') setWeather('snow')
-  }
-
-  if (retro) return <Retro toggleRetro={toggleRetro} />
-
   return (
-    <div
-      className={`App ${rave ? 'rave' : ''} ${
-        weather !== '' ? `weather ${weather}` : ''
-      } ${retro ? 'retro' : ''}`}
-    >
+    <div className="App">
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/ee" component={ElectricalEngineering} />
+          <Route path='/' exact component={Homepage} />
         </Switch>
-        <Footer
-          setWeather={setRainOrSnow}
-          toggleRave={toggleRave}
-          toggleRetro={toggleRetro}
-        />
+        <AppOverlay />
       </Router>
     </div>
-  )
+  );
 }
 
-export default App
+const AppOverlay = () => {
+  return ( <React.Fragment className='Overlay'>
+    <div className="LeftBar">
+      <li>
+        <button className="OverlayButton">
+          <a href={'https://github.com/igreen1'} className="InlineLink">
+            <FaGithub />
+          </a>
+        </button>
+      </li>
+      <li>
+        <button className="OverlayButton">
+          <a
+            href={'https://www.linkedin.com/in/ian-green2/'}
+            className="InlineLink"
+          >
+            <FaLinkedinIn />
+          </a>
+        </button>
+      </li>
+      <li className="VerticalLine" />
+    </div>
+    <div className="RightBar">
+      <li>
+        <a href="mailto:iangreen2.00@gmail.com" className="Email InlineLink">
+          iangreen2.00@gmail.com
+          </a>
+      </li>
+      <li className="VerticalLine" style={{ width: '8px' }} />
+    </div>
+  </React.Fragment>)
+}
+
+export default App;

@@ -1,0 +1,125 @@
+.Section {
+  max-width: 100%;
+  padding: 0 10% 0 10%;
+  margin-bottom: 15vh;
+  color: inherit;
+  background-color: inherit;
+
+  h1 {
+    font-size: 5vmin;
+  }
+
+  .Title {
+    border-bottom: 1px solid black;
+    text-align: left;
+  }
+
+  .Text {
+    text-align: justify;
+  }
+
+  .InlineImage {
+    max-height: 50%;
+    max-width: 50%;
+  }
+
+  .HeaderImage {
+    max-width: 90%;
+    max-height: 30vh;
+    height: 30vmin;
+  }
+
+}
+
+
+.Project {
+  margin-bottom: 40px;
+  h2 {
+    margin-bottom: 3px;
+  }
+  h3 {
+    margin-top: 3px;
+    margin-bottom: 5px;
+  }
+  p {
+    margin-top: 3px;
+  }
+  .Links {
+    font-size: 30px;
+    margin: 5px;
+    padding: 5px;
+    a {
+      cursor: pointer;
+      color: black;
+      margin: 10px 20px 10px 20px;
+    }
+  }
+}
+
+.Landing {
+  margin-top: calc(30vh - 50px);
+  margin-bottom: 50vh;
+  max-width: 100%;
+  padding: 0 10% 0 10%;
+  // height: 20vh;
+
+  #Name {
+    font-size: 15vmin;
+    margin: 0;
+  }
+  #NameSubtitle {
+    color: gray;
+    font-size: 5vmin;
+    margin: 0;
+    animation-duration: 1s;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .visible #Name {
+      visibility: visible;
+      animation-timing-function: ease-in;
+      animation-name: slideup;
+      animation-duration: 0.8s;
+    }
+
+    .visible #NameSubtitle {
+      visibility: visible;
+      animation-timing-function: ease-in;
+      animation-name: slideup;
+      animation-duration: 1s;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .InlineImage{
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .invisible {
+    visibility: hidden;
+  }
+  .visible {
+    visibility: visible;
+    animation-timing-function: linear;
+    animation-name: slideup;
+    animation-duration: 0.6s;
+  }
+}
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    padding-top: 1vh;
+  }
+  30% {
+    opacity: 0;
+    padding-top: 1vh;
+  }
+  100% {
+    opacity: 100;
+    padding-top: 0vh;
+  }
+}

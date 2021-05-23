@@ -1,0 +1,60 @@
+#Navbar {
+  position: fixed;
+  top: 0;
+  background-color: #efefef;
+  width: 100%;
+  z-index: 5;
+
+  button {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    cursor: pointer;
+  }
+
+  .Navbarlist {
+    font-weight: bold;
+    overflow: hidden;
+    margin: auto;
+    max-width: 900px;
+    height: 0;
+    text-align: center;
+
+    .NavbarButton {
+      width:100%;
+      font-size: 20px;
+      padding: 10px 30px 10px 30px;
+    }
+    .NavbarButton:hover {
+      background-color: gray;
+    }
+  }
+  .shownav {
+    height: 170px;
+  }
+  #ExpandNavbarButton {
+    font-size: 30px;
+    color: black;
+    float: right;
+  }
+}
+
+// // shrinking
+@media screen and (min-width: 700px) {
+  #Navbar {
+    .Navbarlist {
+      height: auto;
+      display: flex;
+      margin: 0;
+    }
+
+    .shownav {
+      height: auto;
+      display: flex;
+      margin: 0;
+    }
+    #ExpandNavbarButton {
+      display: none;
+    }
+  }
+}

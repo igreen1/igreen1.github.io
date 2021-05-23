@@ -1,46 +1,44 @@
-import { React, useState } from 'react'
+import React from 'react'
 import { withRouter } from 'react-router-dom'
-import './Navbar.css'
 
 import { FaAlignRight } from 'react-icons/fa'
-// import logo from './../images/sursumLogo.png'
+import Spacer from './Spacer'
+import './Navbar.scss'
 
-function Navbar(props) {
-  const [expanded, setExpanded] = useState(false)
+const Navbar = (props) => {
+
+  const [expanded, setExpanded] = React.useState(false)
 
   const toggle = () => {
     setExpanded(!expanded)
   }
 
   return (
-    <div id="Header">
-      <button onClick={() => toggle()} id="ExpandNavbar">
-        <FaAlignRight />
-      </button>
-      <div className={expanded ? 'NavbarList show-nav' : 'NavbarList'}>
+    <>
+    <header id="Navbar">
+      <button onClick={() => toggle()} id='ExpandNavbarButton'><FaAlignRight /></button>
+      <div className={expanded ? 'Navbarlist shownav' : 'Navbarlist'}>
         {pageList.map((page) => {
           return (
-            // <li key={page.name} className="NavbarListItem">
-            <button className="InlineButton">
-              <a
-                className="InlineLink"
-                href={page.link ? page.link : '/' + page.name}
-              >
-                {page.name}
-              </a>
+            <button key={page.name + "NarbarButton"} className='NavbarButton' onClick={(e) => {
+              e.preventDefault();
+              window.location.href = page.link
+            }}>
+              {page.name}
             </button>
-            // </li>
           )
         })}
       </div>
-    </div>
+    </header>
+    <Spacer id='NavbarSpacer' space='50' unit='px'/>
+    </>
   )
 }
 
 const pageList = [
   {
     name: 'Home',
-    link: '/#Home',
+    link: '/',
   },
   {
     name: 'About',
@@ -50,10 +48,6 @@ const pageList = [
     name: 'Projects',
     link: '/#Projects',
   },
-  // {
-  //   name: 'More',
-  //   link: '/#More',
-  // },
   {
     name: 'Contact',
     link: '/#Contact',

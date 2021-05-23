@@ -1,3 +1,22 @@
+.App {
+  text-align: center;
+}
+
+.App- {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App{
+  background-color: inherit;
+}
+
+.InlineLink {
+  cursor: pointer;
+  text-decoration:none;
+  color: inherit
+}
+
 .OverlayButton {
   font-size: 30px;
   color: black;
@@ -19,10 +38,6 @@
   font-size: 20px;
 }
 
-.Email {
-  writing-mode: vertical-rl;
-  padding-bottom: 15px;
-}
 
 .RightBar {
   position: fixed;
@@ -33,6 +48,12 @@
   right: 15px;
   z-index: 1;
   font-size: 20px;
+
+  .Email {
+    writing-mode: vertical-rl;
+    padding-bottom: 15px;
+  }
+  
 }
 
 .VerticalLine {
