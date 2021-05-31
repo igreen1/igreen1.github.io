@@ -1,9 +1,9 @@
 #Navbar {
   position: fixed;
   top: 0;
-  background-color: #efefef;
   width: 100%;
   z-index: 5;
+  background-color: none;
 
   button {
     border: none;
@@ -30,18 +30,22 @@
     }
   }
   .shownav {
-    height: 170px;
+    height: 220px;
+    background-color: #efefef;
   }
   #ExpandNavbarButton {
     font-size: 30px;
     color: black;
     float: right;
+    background-color: #efefef;
   }
 }
 
-// // shrinking
+// shrinking
 @media screen and (min-width: 700px) {
   #Navbar {
+
+    background-color: #efefef;
     .Navbarlist {
       height: auto;
       display: flex;

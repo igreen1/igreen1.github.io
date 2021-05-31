@@ -52,6 +52,10 @@ const pageList = [
     name: 'Contact',
     link: '/#Contact',
   },
+  {
+    name: 'Professional',
+    link: '/#Resume'
+  }
 ]
 
 export default withRouter(Navbar)

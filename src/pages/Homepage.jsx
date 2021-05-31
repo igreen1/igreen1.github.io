@@ -25,10 +25,16 @@ export default function Homepage(props) {
   return (
     <div key='Homepage' className={`${weather !== '' ? `weather ${weather}` : ''}`}>
       <Landing />
+      <PageLink id='About' />
       {/* <Spacer space='3' unit='vmin'/>  */}
       <About />
+      <PageLink id='Projects' />
       <Projects />
+      <PageLink id="Resume" />
+      <ProfessionalExperience />
+      <PageLink id='Contact' />
       <ContactMe style={{ marginBottom: '5vh' }} />
+
       <Footer setWeather={changeWeather} />
     </div>
   )
@@ -37,6 +43,11 @@ export default function Homepage(props) {
 
 
 //Rather than pollute the source folders, below are the sections
+
+const PageLink = ({ id }) => {
+  console.log(id)
+  return <div style={{ height: '10px' }} id={id}></div>
+}
 
 const Landing = () => {
   const ref = React.useRef()
@@ -52,14 +63,14 @@ const Landing = () => {
     },
   })
   return (
-    <div className='Section Landing'>
-      <div id="Home" ref={ref} className={isVisible ? 'visible' : 'invisible'}>
+    <React.Fragment>
+      <div id="Home" ref={ref} className={`Section Landing ${isVisible ? 'visible' : 'invisible'}`}>
         <h1 id="Name">Ian Green</h1>
         <p id="NameSubtitle">
           <strong>Full</strong>-stack developer
         </p>
       </div>
-    </div>
+    </React.Fragment>
   )
 }
 
@@ -76,19 +87,31 @@ const About = () => {
       }
     },
   })
+
+  const AboutMe = [
+    `I'm Ian. I'm pursuing two degrees: a B.S. in Computer Science with a minor in Applied Mathematics
+    and a B.S.E. in Electrical Engineering with a Computer Engineering emphasis with a minor in Pure Mathematics. I am in two on-campus research labs - the LMU Bioinformatics Lab and the LMU Cubesat Program.
+    I also usually work multiple jobs on campus, holding simulataneous TA positions in the EE and Math departments as well as multiple tutoring positiosn`,
+    `Beyond my majors and research, I actively participate in service opportunities. 
+    As a member of an on-campus service org, Alpha Sigma Nu honor society, and Tau Beta Pi honor society, I perform upwards of 50 hours of service a semester. Even over COVID, I performed 40 hours of service per semester`,
+    `In my freetime, I am usually found doing some outdoor activities - I love kayaking, hiking, and bouldering. My current goal is to visit every national park in the next ten years.`,
+    `I am looking for post-grad opportunities (2022). While my abilities span the entire stack, I am mostly interested in 'low-level' programming eg., firmware.`
+
+  ]
+
+
   return (
-    <div className='Section'>
-      <div id="About" ref={ref} className={isVisible ? 'visible' : 'invisible'}>
+    <React.Fragment>
+      <div ref={ref} className={`Section ${isVisible ? 'visible' : 'invisible'}`}>
         <h1 className='Title'>About</h1>
         <ul style={{ listStyleType: "none", display: "flex", padding: '0%' }}>
           <li>
-            <p style={{ marginRight: '3px' }} className='Text'>I'm Ian, a college student pursueing a B.S. in Computer Science and a B.S.E. in Electrical Engineering with a computer engineering emphasis from Loyola Marymount University in LA. I'm looking for post-grad opportunities anywhere in the world.</p>
-            <p style={{ marginRight: '3px' }} className='Text'>I am interested in software-hardware interfacing, data science, and microprocessor design, but I excel in any field - from electronics to theory of computation</p>
+            {AboutMe.map((paragraph) => <p style={{ marginRight: '3px' }} className='Text'>{paragraph}</p>)}
           </li>
           <img style={{ marginLeft: '3px' }} src={PicOfMe} className='InlineImage' alt='Image of myself on a hike' />
         </ul>
       </div>
-    </div>
+    </React.Fragment>
   )
 }
 
@@ -139,9 +162,9 @@ const Projects = () => {
   ]
 
   return (
-    <div className='Section'>
-      <div id="Projects" ref={ref} className={isVisible ? 'visible' : 'invisible'}>
-        <h1 className='Title'>Projects</h1>
+    <React.Fragment>
+      <div ref={ref} className={`Section ${isVisible ? 'visible' : 'invisible'}`}>
+        <h1 className='Title'>Highlighted Projects</h1>
         {ProjectList.map((project) =>
           <ProjectViewer
             title={project?.title}
@@ -153,15 +176,15 @@ const Projects = () => {
           />
         )}
       </div>
-    </div>
+    </React.Fragment>
   )
 }
 
 const ProjectViewer = (params) => {
 
   return (
-    <div className='Subsection Project'>
-      <img src={params.image} className='HeaderImage' />
+    <div className='Project'>
+      <img src={params.image} className='Subsection HeaderImage' />
       <h2>{params.title}</h2>
       <h3 className='Subtitle'>{params.subtitle}</h3>
       <div className='Links'>
@@ -176,10 +199,66 @@ const ProjectViewer = (params) => {
           </a>
         )}
       </div>
-      <p> {params?.description} </p>
+      <p className='Text'> {params?.description} </p>
     </div>
   )
 
+}
+
+const ProfessionalExperience = () => {
+  const ref = React.useRef()
+  const [isVisible, setIsVisible] = React.useState(false)
+
+  useIntersectionObserver({
+    target: ref,
+    onIntersect: ([{ isIntersecting }], observerElement) => {
+      if (isIntersecting) {
+        setIsVisible(true)
+        observerElement.unobserve(ref.current)
+      }
+    },
+  })
+
+  const ProfessionalPositions = [
+    {
+      title: 'John Hopkins University - Applied Physics Laboratory',
+      subtitle: 'Intern: Software Developer on the Testing and Evaluation Team',
+      description: 'As an intern in the Air and Missile Defense Sector, Combat Systems Testing and Evaluation team, \
+        I worked on improving and automating the workflow, working on data intake of large raw datsets. I worked in Pandas and propietary software. \
+        I learned to work with large datasets, to integrate various softwares smoothly, and to use data analytic tools.',
+      image: 'assets/vibah.jpg', //TODO: get the SEWIP logo ha
+      // website: 'https://igreen1.github.io/Graphics/'
+    },
+    {
+      title: 'Loyola Marymount University - Various Departments',
+      subtitle: 'Teaching Assistant',
+      description: "I have worked for various departments and various classes as a TA at LMU. \
+        In the Math department, I worked with the Business Calculus class as well as the general Calculus I, II, and III classes as a TA. \
+        In the EE department, I worked as a TA for Algorithms and Applications, a class teaching MATLAB. In these positions, \
+        I've learned better communication when helping students, improved my skills in math and programming, and trained my scheduling abilities.",
+      image: 'assets/vibah.jpg' //TODO
+    }
+    // {
+    //    TODO: the work with HVAC company
+    // }
+  ]
+
+  return (
+    <React.Fragment>
+      <div ref={ref} className={`Section ${isVisible ? 'visible' : 'invisible'}`}>
+        <h1 className='Title'>Professional Experience</h1>
+        {ProfessionalPositions.map((project) =>
+          <ProjectViewer
+            title={project?.title}
+            subtitle={project?.subtitle}
+            description={project?.description}
+            image={project?.image}
+            website={project?.website}
+          />
+        )}
+      </div>
+    </React.Fragment>
+  )
 }
 
 const ContactMe = () => {
@@ -196,12 +275,15 @@ const ContactMe = () => {
     },
   })
   return (
-    <div className='Section'>
-      <div id="Contact" ref={ref} className={isVisible ? 'visible' : 'invisible'}>
+    <React.Fragment>
+      <div ref={ref} className={`Section ${isVisible ? 'visible' : 'invisible'}`}>
         <h1 className='Title'>Contact</h1>
         <p>At some point, I may add a form here. For now, contact me via email!</p>
-        <a className='InlineLink' href='mailto:iangreen2.00@gmail.com'>iangreen2.00@gmail.com</a>
+        <button className='OverlayButton'>
+          <a className='InlineLink' style={{ fontSize: '70%' }} href='mailto:iangreen2.00@gmail.com'>iangreen2.00@gmail.com</a>
+        </button>
+
       </div>
-    </div>
+    </React.Fragment >
   )
 }
