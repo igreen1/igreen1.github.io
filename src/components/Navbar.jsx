@@ -42,20 +42,20 @@ const pageList = [
   },
   {
     name: 'About',
-    link: '/#About',
+    link: '#About',
   },
   {
     name: 'Projects',
-    link: '/#Projects',
-  },
-  {
-    name: 'Contact',
-    link: '/#Contact',
+    link: '#Projects',
   },
   {
     name: 'Professional',
-    link: '/#Resume'
-  }
+    link: '#Resume'
+  },
+  {
+    name: 'Contact',
+    link: '#Contact',
+  },
 ]
 
 export default withRouter(Navbar)

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import './App.scss';
 import Homepage from './pages/Homepage'
+import FunHomepage from './pages/FunHomepage'
 import Navbar from './components/Navbar'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/' exact component={Homepage} />
+          <Route path='/fun' exact component={FunHomepage} />
         </Switch>
         <AppOverlay />
       </Router>

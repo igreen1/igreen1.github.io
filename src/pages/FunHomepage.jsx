@@ -1,5 +1,10 @@
+/*
+Life is too short to take everything seriously
+*/
+
+
 import React from 'react'
-import './Homepage.scss'
+import './FunHomepage.scss'
 import '../assets/weather.css'
 import useIntersectionObserver from '../hooks/userIntersectionObserver'
 import Footer from '../components/Footer'
@@ -23,7 +28,7 @@ export default function Homepage(props) {
   }
 
   return (
-    <div key='Homepage' className={`${weather !== '' ? `weather ${weather}` : ''}`}>
+    <div key='FunHomepage' className={`FunHomepage ${weather !== '' ? `weather ${weather}` : ''}`}>
       <Landing />
       <PageLink id='About' />
       {/* <Spacer space='3' unit='vmin'/>  */}
@@ -90,10 +95,12 @@ const About = () => {
 
   const AboutMe = [
     `I'm Ian. I'm pursuing two degrees: a B.S. in Computer Science with a minor in Applied Mathematics
-    and a B.S.E. in Electrical Engineering with a Computer Engineering emphasis with a minor in Pure Mathematics.`,
-    `Beyond my majors and research, I strive to incorporate service into my life.
-    Through an on-campus service org, Alpha Sigma Nu honor society, and Tau Beta Pi honor society, I perform upwards of 50 hours of service a semester.`,
+    and a B.S.E. in Electrical Engineering with a Computer Engineering emphasis with a minor in Pure Mathematics. I am in two on-campus research labs - the LMU Bioinformatics Lab and the LMU Cubesat Program.
+    I also usually work multiple jobs on campus, holding simulataneous TA positions in the EE and Math departments as well as multiple tutoring positiosn`,
+    `Beyond my majors and research, I actively participate in service opportunities. 
+    As a member of an on-campus service org, Alpha Sigma Nu honor society, and Tau Beta Pi honor society, I perform upwards of 50 hours of service a semester. Even over COVID, I performed 40 hours of service per semester`,
     `In my freetime, I am usually found doing some outdoor activities - I love kayaking, hiking, and bouldering. My current goal is to visit every national park in the next ten years.`,
+    `I am looking for post-grad opportunities (2022). While my abilities span the entire stack, I am mostly interested in 'low-level' programming eg., firmware.`
 
   ]
 
@@ -220,12 +227,12 @@ const ProfessionalExperience = () => {
   const ProfessionalPositions = [
     {
       title: 'John Hopkins University - Applied Physics Laboratory',
-      subtitle: 'Intern: Software Developer for Testing and Evaluation',
+      subtitle: 'Intern: Software Developer on the Testing and Evaluation Team',
       description: 'As an intern in the Air and Missile Defense Sector, Combat Systems Testing and Evaluation team, \
         I worked on improving and automating the workflow, working on data intake of large raw datsets. I worked in Pandas and propietary software. \
         I learned to work with large datasets, to integrate various softwares smoothly, and to use data analytic tools.',
-      image: 'assets/sew.png', //TODO: get the SEWIP logo ha
-      website: 'https://www.jhuapl.edu/OurWork/AirandMissileDefense',
+      image: 'assets/vibah.jpg', //TODO: get the SEWIP logo ha
+      // website: 'https://igreen1.github.io/Graphics/'
     },
     {
       title: 'Loyola Marymount University - Various Departments',
@@ -234,7 +241,7 @@ const ProfessionalExperience = () => {
         In the Math department, I worked with the Business Calculus class as well as the general Calculus I, II, and III classes as a TA. \
         In the EE department, I worked as a TA for Algorithms and Applications, a class teaching MATLAB. In these positions, \
         I've learned better communication when helping students, improved my skills in math and programming, and trained my scheduling abilities.",
-      image: 'assets/lmu.png' //TODO
+      image: 'assets/vibah.jpg' //TODO
     }
     // {
     //    TODO: the work with HVAC company
