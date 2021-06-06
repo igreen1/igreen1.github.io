@@ -32,6 +32,16 @@
     height: 30vmin;
   }
 
+  .FlatButton {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    cursor: pointer;
+    font-size: inherit;
+    border: 1px black solid;
+    padding: 20px;
+  }
+
 }
 
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Homepage.scss'
 import '../assets/weather.css'
 import useIntersectionObserver from '../hooks/userIntersectionObserver'
@@ -98,6 +98,7 @@ const About = () => {
   ]
 
 
+
   return (
     <React.Fragment>
       <div ref={ref} className={`Section ${isVisible ? 'visible' : 'invisible'}`}>
@@ -159,6 +160,25 @@ const Projects = () => {
     // },
   ]
 
+  const SecondaryProjects = [
+    {
+      title: 'Automata Toolbox',
+      subtitle: 'Theory of Computation Final Project ',
+      description: 'This tool performs various operations on finite automata (NFA & DFA) and integrates regex tools with them.',
+      image: 'assets/automata.gif',
+      github: 'https://github.com/igreen1/automata-toolbox',
+    },
+    {
+      title: 'Cubesat',
+      subtitle: 'Rotor and Antenna Control Programs',
+      description: 'Various tools developed to automate and integrate the work of the LMU Cubesat lab. Allow for Hamlib control of our custom rotor hardware and large distributed trees of rotors to be controlled from one endpoint. A website showcasing these is in development. The projects are being migrated to GitHub as well.',
+      image: 'assets/cubesat.png',
+      github: 'https://github.com/LMU-Cubesat/'
+    }
+  ]
+
+  const [showSecondaryProjects, setShowSecondaryProjects] = React.useState(false)
+
   return (
     <React.Fragment>
       <div ref={ref} className={`Section ${isVisible ? 'visible' : 'invisible'}`}>
@@ -173,8 +193,36 @@ const Projects = () => {
             website={project?.website}
           />
         )}
+        {
+          !showSecondaryProjects &&
+          <button className='FlatButton' onClick={() => { setShowSecondaryProjects(true) }}>
+            Show More
+          </button>
+        }
+        {
+          showSecondaryProjects && (
+            <React.Fragment>
+              {
+                SecondaryProjects.map((project) =>
+                  <ProjectViewer
+                    title={project?.title}
+                    subtitle={project?.subtitle}
+                    description={project?.description}
+                    image={project?.image}
+                    github={project?.github}
+                    website={project?.website}
+                  />
+                )
+              }
+              <button className='FlatButton' onClick={() => { setShowSecondaryProjects(false) }}>
+                Hide
+              </button>
+            </React.Fragment>
+          )
+        }
       </div>
-    </React.Fragment>
+
+    </React.Fragment >
   )
 }
 
@@ -222,8 +270,8 @@ const ProfessionalExperience = () => {
       title: 'John Hopkins University - Applied Physics Laboratory',
       subtitle: 'Intern: Software Developer for Testing and Evaluation',
       description: 'As an intern in the Air and Missile Defense Sector, Combat Systems Testing and Evaluation team, \
-        I worked on improving and automating the workflow, working on data intake of large raw datsets. I worked in Pandas and propietary software. \
-        I learned to work with large datasets, to integrate various softwares smoothly, and to use data analytic tools.',
+        I worked on improving and automating the workflow, improving data intake of large raw datsets. I programmed in Pandas and propietary software. \
+        I learned to work on large datasets, to integrate various softwares smoothly, and to use data analytic tools.',
       image: 'assets/sew.png', //TODO: get the SEWIP logo ha
       website: 'https://www.jhuapl.edu/OurWork/AirandMissileDefense',
     },
