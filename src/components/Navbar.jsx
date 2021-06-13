@@ -49,7 +49,7 @@ const pageList = [
     link: '#Projects',
   },
   {
-    name: 'Professional',
+    name: 'Resume',
     link: '#Resume'
   },
   {

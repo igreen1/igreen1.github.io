@@ -7,6 +7,7 @@ import Footer from '../components/Footer'
 // assets
 import PicOfMe from '../assets/placeholder.jpg'
 import { FiGithub, FiExternalLink } from 'react-icons/fi'
+import { HighlightedProjects, BackendProjects, ComputerScienceProjects, ComputerEngineering, ElectricalEngineering, DataScienceProjects, FrontendProjects } from './ProjectList'
 
 export default function Homepage(props) {
 
@@ -31,7 +32,9 @@ export default function Homepage(props) {
       <PageLink id='Projects' />
       <Projects />
       <PageLink id="Resume" />
-      <ProfessionalExperience />
+      <Resume />
+      {/* <ProfessionalExperience /> */}
+
       <PageLink id='Contact' />
       <ContactMe style={{ marginBottom: '5vh' }} />
 
@@ -45,7 +48,6 @@ export default function Homepage(props) {
 //Rather than pollute the source folders, below are the sections
 
 const PageLink = ({ id }) => {
-  console.log(id)
   return <div style={{ height: '10px' }} id={id}></div>
 }
 
@@ -115,9 +117,9 @@ const About = () => {
 }
 
 const Projects = () => {
+
   const ref = React.useRef()
   const [isVisible, setIsVisible] = React.useState(false)
-
   useIntersectionObserver({
     target: ref,
     onIntersect: ([{ isIntersecting }], observerElement) => {
@@ -128,62 +130,24 @@ const Projects = () => {
     },
   })
 
-  const ProjectList = [
-    {
-      title: 'VIBAH Graphics Library',
-      subtitle: 'A graphics library built on top of WebGL using ReactJS',
-      description: 'VIBAH (the group initials) is a graphics library mirroring ThreeJS. It is built on top of WebGL and implements meshes, objects, grouping, animations, shading, and vertex coloring. To view the project, follow the link to its Github Pages website, but note that the pages often load very slowly due to calculations of normals.',
-      image: 'assets/vibah.jpg',
-      github: 'https://github.com/igreen1/Graphics',
-      website: 'https://igreen1.github.io/Graphics/'
-    },
-    {
-      title: "'Custom' Programming Language",
-      subtitle: 'A C-like language we built',
-      description: "Custom is built upon the idea of replaceable keywords. All keywords come from a configuration file. We built it to allow us to emulate any other language we wanted in our class - though, it is primarily built on a C-like philosophy.",
-      image: 'assets/custom.png',
-      github: 'https://github.com/igreen1/Custom',
-      website: 'https://igreen1.github.io/Custom',
-    },
-    {
-      title: 'GRNSight',
-      subtitle: 'Graph visualization tool for gene regulatory networks',
-      description: 'This tool shows the suppression/activation networks of gene regulatory networks. I work on the visualization and testing framework, with an emphasis in fixing d3.js issues',
-      image: 'assets/GRNSight.png',
-      github: 'https://github.com/dondi/GRNsight',
-      website: 'https://dondi.github.io/GRNsight/',
-    },
-    // {
-    //   title: 'Automata Simulator',
-    //   description: 'TODO',
-    //   image: 'Automata.png'
-    // },
-  ]
 
-  const SecondaryProjects = [
-    {
-      title: 'Automata Toolbox',
-      subtitle: 'Theory of Computation Final Project ',
-      description: 'This tool performs various operations on finite automata (NFA & DFA) and integrates regex tools with them.',
-      image: 'assets/automata.gif',
-      github: 'https://github.com/igreen1/automata-toolbox',
-    },
-    {
-      title: 'Cubesat',
-      subtitle: 'Rotor and Antenna Control Programs',
-      description: 'Various tools developed to automate and integrate the work of the LMU Cubesat lab. Allow for Hamlib control of our custom rotor hardware and large distributed trees of rotors to be controlled from one endpoint. A website showcasing these is in development. The projects are being migrated to GitHub as well.',
-      image: 'assets/cubesat.png',
-      github: 'https://github.com/LMU-Cubesat/'
-    }
-  ]
 
-  const [showSecondaryProjects, setShowSecondaryProjects] = React.useState(false)
+  const [currentProject, setCurrentProject] = React.useState(HighlightedProjects)
+  const [showStack, setShowStack] = React.useState()
+
+  const projectCategoryButton = (project) => {
+    return <button className='FlatButton' onClick={() => setCurrentProject(project)}>{project.name}</button>
+  }
+  const buttonList = [HighlightedProjects, FrontendProjects, DataScienceProjects, BackendProjects, ComputerScienceProjects, ComputerEngineering, ElectricalEngineering,].map((proj) => projectCategoryButton(proj))
+
+
 
   return (
     <React.Fragment>
       <div ref={ref} className={`Section ${isVisible ? 'visible' : 'invisible'}`}>
-        <h1 className='Title'>Highlighted Projects</h1>
-        {ProjectList.map((project) =>
+        {buttonList}
+        <h1 className='Title'>{currentProject.name}</h1>
+        {currentProject.projects.map((project) =>
           <ProjectViewer
             title={project?.title}
             subtitle={project?.subtitle}
@@ -193,33 +157,6 @@ const Projects = () => {
             website={project?.website}
           />
         )}
-        {
-          !showSecondaryProjects &&
-          <button className='FlatButton' onClick={() => { setShowSecondaryProjects(true) }}>
-            Show More
-          </button>
-        }
-        {
-          showSecondaryProjects && (
-            <React.Fragment>
-              {
-                SecondaryProjects.map((project) =>
-                  <ProjectViewer
-                    title={project?.title}
-                    subtitle={project?.subtitle}
-                    description={project?.description}
-                    image={project?.image}
-                    github={project?.github}
-                    website={project?.website}
-                  />
-                )
-              }
-              <button className='FlatButton' onClick={() => { setShowSecondaryProjects(false) }}>
-                Hide
-              </button>
-            </React.Fragment>
-          )
-        }
       </div>
 
     </React.Fragment >
@@ -251,7 +188,63 @@ const ProjectViewer = (params) => {
 
 }
 
-const ProfessionalExperience = () => {
+// const ProfessionalExperience = () => {
+//   const ref = React.useRef()
+//   const [isVisible, setIsVisible] = React.useState(false)
+
+//   useIntersectionObserver({
+//     target: ref,
+//     onIntersect: ([{ isIntersecting }], observerElement) => {
+//       if (isIntersecting) {
+//         setIsVisible(true)
+//         observerElement.unobserve(ref.current)
+//       }
+//     },
+//   })
+
+//   const ProfessionalPositions = [
+//     {
+//       title: 'John Hopkins University - Applied Physics Laboratory',
+//       subtitle: 'Intern: Software Developer for Testing and Evaluation',
+//       description: 'As an intern in the Air and Missile Defense Sector, Combat Systems Testing and Evaluation team, \
+//         I worked on improving and automating the workflow, improving data intake of large raw datsets. I programmed in Pandas and propietary software. \
+//         I learned to work on large datasets, to integrate various softwares smoothly, and to use data analytic tools.',
+//       image: 'assets/sew.png', //TODO: get the SEWIP logo ha
+//       website: 'https://www.jhuapl.edu/OurWork/AirandMissileDefense',
+//     },
+//     {
+//       title: 'Loyola Marymount University - Various Departments',
+//       subtitle: 'Teaching Assistant',
+//       description: "I have worked for various departments and various classes as a TA at LMU. \
+//         In the Math department, I worked with the Business Calculus class as well as the general Calculus I, II, and III classes as a TA. \
+//         In the EE department, I worked as a TA for Algorithms and Applications, a class teaching MATLAB. In these positions, \
+//         I've learned better communication when helping students, improved my skills in math and programming, and trained my scheduling abilities.",
+//       image: 'assets/lmu.png' //TODO
+//     }
+//     // {
+//     //    TODO: the work with HVAC company
+//     // }
+//   ]
+
+//   return (
+//     <React.Fragment>
+//       <div ref={ref} className={`Section ${isVisible ? 'visible' : 'invisible'}`}>
+//         <h1 className='Title'>Professional Experience</h1>
+//         {ProfessionalPositions.map((project) =>
+//           <ProjectViewer
+//             title={project?.title}
+//             subtitle={project?.subtitle}
+//             description={project?.description}
+//             image={project?.image}
+//             website={project?.website}
+//           />
+//         )}
+//       </div>
+//     </React.Fragment>
+//   )
+// }
+
+const Resume = () => {
   const ref = React.useRef()
   const [isVisible, setIsVisible] = React.useState(false)
 
@@ -264,44 +257,11 @@ const ProfessionalExperience = () => {
       }
     },
   })
-
-  const ProfessionalPositions = [
-    {
-      title: 'John Hopkins University - Applied Physics Laboratory',
-      subtitle: 'Intern: Software Developer for Testing and Evaluation',
-      description: 'As an intern in the Air and Missile Defense Sector, Combat Systems Testing and Evaluation team, \
-        I worked on improving and automating the workflow, improving data intake of large raw datsets. I programmed in Pandas and propietary software. \
-        I learned to work on large datasets, to integrate various softwares smoothly, and to use data analytic tools.',
-      image: 'assets/sew.png', //TODO: get the SEWIP logo ha
-      website: 'https://www.jhuapl.edu/OurWork/AirandMissileDefense',
-    },
-    {
-      title: 'Loyola Marymount University - Various Departments',
-      subtitle: 'Teaching Assistant',
-      description: "I have worked for various departments and various classes as a TA at LMU. \
-        In the Math department, I worked with the Business Calculus class as well as the general Calculus I, II, and III classes as a TA. \
-        In the EE department, I worked as a TA for Algorithms and Applications, a class teaching MATLAB. In these positions, \
-        I've learned better communication when helping students, improved my skills in math and programming, and trained my scheduling abilities.",
-      image: 'assets/lmu.png' //TODO
-    }
-    // {
-    //    TODO: the work with HVAC company
-    // }
-  ]
-
   return (
     <React.Fragment>
       <div ref={ref} className={`Section ${isVisible ? 'visible' : 'invisible'}`}>
-        <h1 className='Title'>Professional Experience</h1>
-        {ProfessionalPositions.map((project) =>
-          <ProjectViewer
-            title={project?.title}
-            subtitle={project?.subtitle}
-            description={project?.description}
-            image={project?.image}
-            website={project?.website}
-          />
-        )}
+        <h1 className='Title'>Resume</h1>
+        <iframe src='assets/resume.pdf' height='500px' width='100%'></iframe>
       </div>
     </React.Fragment>
   )
