@@ -11,7 +11,7 @@ function Footer({ setWeather }) {
     <React.Fragment>
       <div
         style={{
-          borderBottom: '1px solid black',
+          borderBottom: '1px solid white',
           marginBottom: '20px',
           width: '200px',
           margin: 'auto'

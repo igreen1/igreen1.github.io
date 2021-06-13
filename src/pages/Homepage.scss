@@ -1,16 +1,20 @@
 .Section {
-  max-width: 100%;
+  width: 80%;
   padding: 0 10% 0 10%;
   margin-bottom: 15vh;
   color: inherit;
   background-color: inherit;
+  border-radius: 50px;
+  color: white;
+  text-shadow: 1px 1px 10px black;
+  z-index: 5;
 
   h1 {
     font-size: 5vmin;
   }
 
   .Title {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(133, 83, 83);
     text-align: left;
   }
 
@@ -38,8 +42,9 @@
     background-color: inherit;
     cursor: pointer;
     font-size: inherit;
-    border: 1px black solid;
+    border: 1px white solid;
     padding: 20px;
+    color: white;
   }
 
 }
@@ -63,7 +68,7 @@
     padding: 5px;
     a {
       cursor: pointer;
-      color: black;
+      color: white;
       margin: 10px 20px 10px 20px;
     }
   }

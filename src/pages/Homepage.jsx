@@ -31,8 +31,8 @@ export default function Homepage(props) {
       <About />
       <PageLink id='Projects' />
       <Projects />
-      <PageLink id="Resume" />
-      <Resume />
+      {/* <PageLink id="Resume" />
+      <Resume /> */}
       {/* <ProfessionalExperience /> */}
 
       <PageLink id='Contact' />

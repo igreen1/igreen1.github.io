@@ -172,7 +172,14 @@ const ElectricalEngineering = {
       description: 'Designed and built an operational amplifier using at-home lab kits during my Junior Lab II course. The Op-Amp (shown in the image above) was designed in one week and implemented in class (<3 hours). From the abstract: An operational amplifier was tested with a gain of 511, a DC offset of less than 0.01V, an input resistance of 17k-ohm, an output resistance of less than 27ohm, a -3dB cutoff frequency of 50Hz, an output swing of 2.1V. This amplifier was designed for a load of 200ohm. ',
       website: 'https://www.overleaf.com/read/xmcjxfnxxnsf',
       image: 'assets/opamp.png'
-    }
+    },
+    // {
+    //   title: 'Traffic Light Controller',
+    //   subtitle: 'A traffic light controller implemented using hardware only',
+    //   description: 'Designed and simulated a traffic light controller',
+    //   image: 'traffic_light.png',
+    //   github:'',
+    // }
   ]
 }
 

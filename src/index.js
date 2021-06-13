@@ -4,9 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import './stars.scss'
+
 ReactDOM.render(
   <React.StrictMode>
+  <div id='stars'></div>
+  <div id='stars2'></div>
     <App />
+    <div id='stars3'></div>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -48,10 +48,10 @@ const pageList = [
     name: 'Projects',
     link: '#Projects',
   },
-  {
-    name: 'Resume',
-    link: '#Resume'
-  },
+  // {
+  //   name: 'Resume',
+  //   link: '#Resume'
+  // },
   {
     name: 'Contact',
     link: '#Contact',

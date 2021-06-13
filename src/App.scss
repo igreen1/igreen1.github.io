@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  color:white;
 }
 
 .App- {
@@ -8,7 +9,7 @@
 }
 
 .App{
-  background-color: inherit;
+  background-color:inherit;
 }
 
 .InlineLink {
@@ -19,7 +20,7 @@
 
 .OverlayButton {
   font-size: 30px;
-  color: black;
+  color: white;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -58,7 +59,7 @@
 
 .VerticalLine {
   writing-mode: sideways-lr;
-  border-right: 6px solid black;
+  border-right: 6px solid white;
   width: 20px;
   height: 10vh;
 }

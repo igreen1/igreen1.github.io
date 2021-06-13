@@ -3,13 +3,15 @@
   top: 0;
   width: 100%;
   z-index: 5;
-  background-color: none;
+  background-color: #090a0f;
 
   button {
     border: none;
     outline: none;
     background-color: inherit;
     cursor: pointer;
+    color: white;
+    text-shadow: 1px 1px 10px black;
   }
 
   .Navbarlist {
@@ -30,14 +32,14 @@
     }
   }
   .shownav {
-    height: 220px;
-    background-color: #efefef;
+    height: 175px;
+    // background-color: #efefef;
   }
   #ExpandNavbarButton {
     font-size: 30px;
-    color: black;
+    color: white;
     float: right;
-    background-color: #efefef;
+    background-color: inherit;
   }
 }
 
@@ -45,7 +47,7 @@
 @media screen and (min-width: 700px) {
   #Navbar {
 
-    background-color: #efefef;
+    background-color: #090a0f;
     .Navbarlist {
       height: auto;
       display: flex;
