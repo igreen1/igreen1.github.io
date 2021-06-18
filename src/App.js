@@ -23,7 +23,7 @@ function App() {
 }
 
 const AppOverlay = () => {
-  return ( <React.Fragment className='Overlay'>
+  return (<React.Fragment className='Overlay'>
     <div className="LeftBar">
       <li>
         <button className="OverlayButton">
@@ -46,9 +46,9 @@ const AppOverlay = () => {
     </div>
     <div className="RightBar">
       <li>
-        <a href="mailto:iangreen2.00@gmail.com" className="Email InlineLink">
-          iangreen2.00@gmail.com
-          </a>
+        <a href="mailto:me@iangreen.space" className="Email InlineLink">
+          me@iangreen.space
+        </a>
       </li>
       <li className="VerticalLine" style={{ width: '8px' }} />
     </div>
