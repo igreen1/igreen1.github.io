@@ -110,7 +110,7 @@ const About = () => {
           </li>
           <div className='InlineImage'>
             <img style={{ marginLeft: '3px' }} src={'assets/me.png'} alt='Image of myself on a hike from Marcella Maggio' />
-            <p>Art by <a className='InlineLink' style={{textDecoration:'underline'}} href='mailto:mmaggio@lion.lmu.edu'>Marcella Maggio</a></p>
+            <p>Art by <a className='InlineLink' style={{textDecoration:'underline'}} href='https://www.marcella-maggio.com/'>Marcella Maggio</a></p>
           </div>
 
         </ul>
