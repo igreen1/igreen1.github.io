@@ -75,7 +75,7 @@ const DataScienceProjects = {
       title: 'Fieldpiece',
       subtitle: 'Intern: Machine Learning model testing and creation',
       description: 'Worked to intake and munge data from various systems. Employed machine learning on the large data sets to model and predict HVAC behaviour',
-      image: 'ml.jpeg',
+      image: 'assets/fieldpiece.png',
       website: 'https://www.fieldpiece.com/',
     },
     {
@@ -184,26 +184,26 @@ const ElectricalEngineering = {
 }
 
 
-const SecondaryProjects = {
-  name: 'Test Projects',
-  subtitle: 'Some other recent projects',
-  projects: [
-    {
-      title: 'Automata Toolbox',
-      subtitle: 'Theory of Computation Final Project ',
-      description: 'This tool performs various operations on finite automata (NFA & DFA) and integrates regex tools with them.',
-      image: 'assets/automata.gif',
-      github: 'https://github.com/igreen1/automata-toolbox',
-    },
-    {
-      title: 'Cubesat',
-      subtitle: 'Rotor and Antenna Control Programs',
-      description: 'Various tools developed to automate and integrate the work of the LMU Cubesat lab. Allow for Hamlib control of our custom rotor hardware and large distributed trees of rotors to be controlled from one endpoint. A website showcasing these is in development. The projects are being migrated to GitHub as well.',
-      image: 'assets/cubesat.png',
-      github: 'https://github.com/LMU-Cubesat/'
-    }
-  ]
-}
+// const SecondaryProjects = {
+//   name: 'Test Projects',
+//   subtitle: 'Some other recent projects',
+//   projects: [
+//     {
+//       title: 'Automata Toolbox',
+//       subtitle: 'Theory of Computation Final Project ',
+//       description: 'This tool performs various operations on finite automata (NFA & DFA) and integrates regex tools with them.',
+//       image: 'assets/automata.gif',
+//       github: 'https://github.com/igreen1/automata-toolbox',
+//     },
+//     {
+//       title: 'Cubesat',
+//       subtitle: 'Rotor and Antenna Control Programs',
+//       description: 'Various tools developed to automate and integrate the work of the LMU Cubesat lab. Allow for Hamlib control of our custom rotor hardware and large distributed trees of rotors to be controlled from one endpoint. A website showcasing these is in development. The projects are being migrated to GitHub as well.',
+//       image: 'assets/cubesat.png',
+//       github: 'https://github.com/LMU-Cubesat/'
+//     }
+//   ]
+// }
 
 
-export { HighlightedProjects, BackendProjects, ComputerScienceProjects, ComputerEngineering, ElectricalEngineering, SecondaryProjects, DataScienceProjects, FrontendProjects }
+export { HighlightedProjects, BackendProjects, ComputerScienceProjects, ComputerEngineering, ElectricalEngineering, DataScienceProjects, FrontendProjects }

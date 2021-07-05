@@ -5,7 +5,6 @@ import useIntersectionObserver from '../hooks/userIntersectionObserver'
 import Footer from '../components/Footer'
 
 // assets
-import PicOfMe from '../assets/placeholder.jpg'
 import { FiGithub, FiExternalLink } from 'react-icons/fi'
 import { HighlightedProjects, BackendProjects, ComputerScienceProjects, ComputerEngineering, ElectricalEngineering, DataScienceProjects, FrontendProjects } from './ProjectList'
 
@@ -109,7 +108,7 @@ const About = () => {
           <li>
             {AboutMe.map((paragraph) => <p style={{ marginRight: '3px' }} className='Text'>{paragraph}</p>)}
           </li>
-          <img style={{ marginLeft: '3px' }} src={PicOfMe} className='InlineImage' alt='Image of myself on a hike' />
+          <img style={{ marginLeft: '3px' }} src={'assets/me.png'} className='InlineImage' alt='Image of myself on a hike' />
         </ul>
       </div>
     </React.Fragment>
