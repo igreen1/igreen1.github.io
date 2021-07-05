@@ -108,7 +108,11 @@ const About = () => {
           <li>
             {AboutMe.map((paragraph) => <p style={{ marginRight: '3px' }} className='Text'>{paragraph}</p>)}
           </li>
-          <img style={{ marginLeft: '3px' }} src={'assets/me.png'} className='InlineImage' alt='Image of myself on a hike' />
+          <div className='InlineImage'>
+            <img style={{ marginLeft: '3px' }} src={'assets/me.png'} alt='Image of myself on a hike from Marcella Maggio' />
+            <p>Art by <a className='InlineLink' style={{textDecoration:'underline'}} href='mailto:mmaggio@lion.lmu.edu'>Marcella Maggio</a></p>
+          </div>
+
         </ul>
       </div>
     </React.Fragment>
