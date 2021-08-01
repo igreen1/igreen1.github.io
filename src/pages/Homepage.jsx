@@ -91,7 +91,7 @@ const About = () => {
 
   const AboutMe = [
     `I'm Ian. I'm pursuing two degrees: a B.S. in Computer Science with a minor in Applied Mathematics
-    and a B.S.E. in Electrical Engineering with a Computer Engineering emphasis with a minor in Pure Mathematics.`,
+    and a B.S.E. in Electrical Engineering with a Computer Engineering emphasis with a minor in Pure Mathematics. I work in the Bioinformatics Lab and Cubesat Lab on campus`,
     `Beyond my majors and research, I strive to incorporate service into my life.
     Through an on-campus service org, Alpha Sigma Nu honor society, and Tau Beta Pi honor society, I perform upwards of 50 hours of service a semester.`,
     `In my freetime, I am usually found doing some outdoor activities - I love kayaking, hiking, and bouldering. My current goal is to visit every national park in the next ten years.`,
