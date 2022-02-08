@@ -18,7 +18,7 @@
   border: none;
   cursor: pointer;
   outline: none;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .LeftBar {
@@ -26,7 +26,7 @@
   display: list-item;
   list-style: none;
   bottom: 0;
-  left: 20px;
+  left: 10px;
   right: auto;
   z-index: 1;
   font-size: 10px;
@@ -39,9 +39,9 @@
   list-style: none;
   bottom: 0;
   left: auto;
-  right: 20px;
+  right: 10px;
   z-index: 1;
-  font-size: 20px;
+  font-size: 15px;
 
   .Email {
     writing-mode: vertical-rl;
