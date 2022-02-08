@@ -3,7 +3,8 @@
   top: 0;
   width: 100%;
   z-index: 5;
-  background-color: #090a0f;
+  background-color: inherit;
+  font-size: auto;
 
   button {
     border: none;
@@ -16,6 +17,7 @@
 
   .Navbarlist {
     font-weight: bold;
+    width: auto;
     overflow: hidden;
     margin: auto;
     max-width: 900px;
@@ -24,7 +26,7 @@
 
     .NavbarButton {
       width:100%;
-      font-size: 20px;
+      font-size: auto;
       padding: 10px 30px 10px 30px;
     }
     .NavbarButton:hover {
@@ -32,19 +34,27 @@
     }
   }
   .shownav {
-    height: 175px;
+    height: 140px;
+    background-color: #090a0f;
     // background-color: #efefef;
+  }
+  .showbutton {
+    height: 140px;
+    background-color: #090a0f !important;
+    float: top;
   }
   #ExpandNavbarButton {
     font-size: 30px;
     color: white;
-    float: right;
+    // float: right;
+    position: absolute;
+    top: 0; right: 0;
     background-color: inherit;
   }
 }
 
 // shrinking
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 530px) {
   #Navbar {
 
     background-color: #090a0f;

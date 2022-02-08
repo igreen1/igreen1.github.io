@@ -1,21 +1,24 @@
-import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import React, {useRef} from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 import './App.scss';
 import Homepage from './pages/Homepage'
 import FunHomepage from './pages/FunHomepage'
 import Navbar from './components/Navbar'
+import Stars from './components/Stars'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
 function App() {
+  const app_ref = useRef(null)
   return (
-    <div className="App">
+    <div className="App" ref={app_ref}>
+      <Stars app_ref={app_ref}/>
       <Router>
         <Navbar />
-        <Switch>
-          <Route path='/' exact component={Homepage} />
-          <Route path='/fun' exact component={FunHomepage} />
-        </Switch>
+        <Routes>
+          <Route path='/' element={<Homepage />} />
+          <Route path='/fun' component={<FunHomepage/>} />
+        </Routes>
         <AppOverlay />
       </Router>
     </div>

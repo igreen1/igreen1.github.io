@@ -1,15 +1,8 @@
 .App {
   text-align: center;
   color:white;
-}
-
-.App- {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App{
-  background-color:inherit;
+  height: 100%;
+  background: linear-gradient(0deg, #1b2735 0%, #090a0f 100%);
 }
 
 .InlineLink {
@@ -19,7 +12,7 @@
 }
 
 .OverlayButton {
-  font-size: 30px;
+  font-size: 20px;
   color: white;
   background: transparent;
   border: none;
@@ -33,10 +26,10 @@
   display: list-item;
   list-style: none;
   bottom: 0;
-  left: 10px;
+  left: 5px;
   right: auto;
   z-index: 1;
-  font-size: 20px;
+  font-size: 10px;
 }
 
 
@@ -46,9 +39,9 @@
   list-style: none;
   bottom: 0;
   left: auto;
-  right: 15px;
+  right: 5px;
   z-index: 1;
-  font-size: 20px;
+  font-size: 12px;
 
   .Email {
     writing-mode: vertical-rl;
@@ -59,12 +52,13 @@
 
 .VerticalLine {
   writing-mode: sideways-lr;
-  border-right: 6px solid white;
-  width: 20px;
+  border-right: 3px solid white;
+  width: 12px;
   height: 10vh;
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 530px) {
   .RightBar {
     display: none;
   }

@@ -75,7 +75,7 @@ const DataScienceProjects = {
       title: 'Fieldpiece',
       subtitle: 'Intern: Machine Learning model testing and creation',
       description: 'Worked to intake and munge data from various systems. Employed machine learning on the large data sets to model and predict HVAC behaviour',
-      image: 'ml.jpeg',
+      image: 'assets/fieldpiece.png',
       website: 'https://www.fieldpiece.com/',
     },
     {
