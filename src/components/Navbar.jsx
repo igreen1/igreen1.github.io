@@ -1,5 +1,4 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
 
 import { FaAlignRight } from 'react-icons/fa'
 import Spacer from './Spacer'
@@ -10,13 +9,14 @@ const Navbar = (props) => {
   const [expanded, setExpanded] = React.useState(false)
 
   const toggle = () => {
+    console.log('hello from button click')
     setExpanded(!expanded)
   }
 
   return (
     <>
     <header id="Navbar">
-      <button onClick={() => toggle()} id='ExpandNavbarButton'><FaAlignRight /></button>
+      <button onClick={() => toggle()} id='ExpandNavbarButton' className={expanded ? 'showbutton' : ''}><FaAlignRight/></button>
       <div className={expanded ? 'Navbarlist shownav' : 'Navbarlist'}>
         {pageList.map((page) => {
           return (
@@ -58,4 +58,4 @@ const pageList = [
   },
 ]
 
-export default withRouter(Navbar)
+export default Navbar

@@ -9,7 +9,7 @@ import React from 'react'
 import './FunHomepage.scss'
 import '../assets/weather.css'
 // assets
-import PicOfMe from '../assets/placeholder.jpg'
+import PicOfMe from '../assets/me.png'
 import { FiGithub, FiExternalLink } from 'react-icons/fi'
 
 export default function FunHomepage(props) {

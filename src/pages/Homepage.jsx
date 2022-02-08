@@ -5,6 +5,10 @@ import useIntersectionObserver from '../hooks/userIntersectionObserver'
 import Footer from '../components/Footer'
 
 // assets
+<<<<<<< HEAD
+=======
+import PicOfMe from '../assets/me.png'
+>>>>>>> beta
 import { FiGithub, FiExternalLink } from 'react-icons/fi'
 import { HighlightedProjects, BackendProjects, ComputerScienceProjects, ComputerEngineering, ElectricalEngineering, DataScienceProjects, FrontendProjects } from './ProjectList'
 

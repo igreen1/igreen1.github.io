@@ -10,7 +10,7 @@
   z-index: 5;
 
   h1 {
-    font-size: 5vmin;
+    font-size: 20px;
   }
 
   .Title {
@@ -20,6 +20,7 @@
 
   .Text {
     text-align: justify;
+    font-size: 12px;
   }
 
   .InlineImage {
@@ -44,9 +45,9 @@
     outline: none;
     background-color: inherit;
     cursor: pointer;
-    font-size: inherit;
+    font-size: 12px;
     border: 1px white solid;
-    padding: 20px;
+    padding: 12px;
     color: white;
   }
 
@@ -85,7 +86,7 @@
   height: 20vh;
 
   #Name {
-    font-size: 15vmin;
+    font-size: 17vmin;
     margin: 0;
   }
   #NameSubtitle {

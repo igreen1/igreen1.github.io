@@ -95,9 +95,13 @@ const DataScienceProjects = {
     {
       title: 'Fieldpiece',
       subtitle: 'Intern: Machine Learning model testing and creation',
+<<<<<<< HEAD
       description: `I worked as the data engineer on the team, creating an automated IoT data intake system from LaraWAN to the machine learning algorithm. In this flow, I worked
                     on InfluxDB and learned AWS S3 and Sagemaker. I created cleaning & munging programs to make the raw data usable and created a data simulation software. In addition,
                     I helped develop the VAE algorithm to detect and predict anomalies.`,
+=======
+      description: 'Worked to intake and munge data from various systems. Employed machine learning on the large data sets to model and predict HVAC behaviour',
+>>>>>>> beta
       image: 'assets/fieldpiece.png',
       website: 'https://www.fieldpiece.com/',
     },
