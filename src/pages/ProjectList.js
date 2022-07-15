@@ -1,3 +1,12 @@
+const microp = {
+  title: 'Dynamic Free-Space Optical Communication',
+  subtitle: 'Senior Design Capstone',
+  description: 'My partner and I built a dynamic free-space optical communication system to communicate between two moving endpoints. We used cheap supplies, totaling less than $500, to create the system, which could be operated using a Raspberry Pi. It achieved a throughput of 1Gbps, meeting our primary design specification. The scanning system was tested successfully, but time and budget limitations did not allow for full integration testing. ',
+  website: 'https://lmucapstone22.wixsite.com/microp',
+  github: 'https://github.com/LMU-Capstone/microp',
+  image: 'assets/microp.png'
+}
+
 const HighlightedProjects = {
 
   'name': 'Highlighted',
@@ -37,14 +46,7 @@ const HighlightedProjects = {
       // website: 'https://www.overleaf.com/read/xmcjxfnxxnsf',
       image: 'assets/opamp.png'
     },
-    // {
-    //   title: 'GRNSight',
-    //   subtitle: 'Graph visualization tool for gene regulatory networks',
-    //   description: 'This tool shows the suppression/activation networks of gene regulatory networks. Primarily, I work on improving the graph visualization code and improving the GUI testing suite. In this position, I learned extensively about d3.JS and force graphs as well as practical skills including Git/GitHUb usage for large programs and group coding best practices.',
-    //   image: 'assets/GRNSight.png',
-    //   github: 'https://github.com/dondi/GRNsight',
-    //   website: 'https://dondi.github.io/GRNsight/',
-    // }
+    microp
   ]
 }
 
@@ -201,6 +203,7 @@ const ElectricalEngineering = {
       website: 'https://github.com/igreen1/igreen1.github.io/blob/321adac6d3af43d1e6217affed7dfb536b35491c/public/assets/JLabII_GreenLongo_Lab09_PostLab.pdf',
       image: 'assets/opamp.png'
     },
+    microp
     // {
     //   title: 'Traffic Light Controller',
     //   subtitle: 'A traffic light controller implemented using hardware only',
