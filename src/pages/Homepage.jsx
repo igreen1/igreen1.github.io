@@ -290,7 +290,7 @@ const ContactMe = () => {
         <h1 className='Title'>Contact</h1>
         <p>At some point, I may add a form here. For now, contact me via email!</p>
         <button className='OverlayButton'>
-          <a className='InlineLink' style={{ fontSize: '70%' }} href='mailto:me@iangreen.space'>me@iangreen.space</a>
+          <a className='InlineLink' style={{ fontSize: '70%' }} href='mailto:me@iangreen.dev'>me@iangreen.dev</a>
         </button>
 
       </div>

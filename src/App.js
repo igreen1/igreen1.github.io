@@ -49,8 +49,8 @@ const AppOverlay = () => {
     </div>
     <div className="RightBar">
       <li>
-        <a href="mailto:me@iangreen.space" className="Email InlineLink">
-          me@iangreen.space
+        <a href="mailto:me@iangreen.dev" className="Email InlineLink">
+          me@iangreen.dev
         </a>
       </li>
       <li className="VerticalLine" style={{ width: '8px' }} />
