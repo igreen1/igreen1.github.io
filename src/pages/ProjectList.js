@@ -12,13 +12,26 @@ const HighlightedProjects = {
   'name': 'Highlighted',
   projects: [
     {
-      title: 'John Hopkins University - Applied Physics Laboratory',
-      subtitle: 'Intern: Software Developer for Testing and Evaluation',
-      description: `As an intern on a testing and evaluation team, I automated the workflow to optimize the data intake of large raw datasets. The datasets were 
-                    parsed, organized, filtered, cleaned, munged, then output into an easily readable solution for downstream analysis. It was built in Python, 
-                    extensively utilizing Pandas and Dask. This data extracter reduced intake time by more than 60% and gave valuable insights into the team. In my role,
-                    I also allowed for novel datasets to be extracted, improving the ability of the team to work with the data provided. After extraction, I also worked 
-                    on improving storage solutions, prototyping a database system in MySQL.`,
+      title: 'Applied Physics Lab',
+      subtitle: 'Modeling and Simulation Lead & Lead Data Engineer',
+      description: `Lead an agile team of 20 for modeling and simulation of the AN/SLQ(v)7 team along with smaller teams of 2-4 for analyses
+                    of live data and simulation data. In my leadership role, I created task plans, financial plans, and staff plans driven by sponsor goals.
+                    I worked on software in Python, C++, MATLAB, and Fortran along with PostgreSQL, MongoDB, MySQL, and Microsoft SQL Server as persistence layers. 
+                    Seeing the various databases, I was able to migrate the team to a unified persistence layer based on PostgresSQL using a distributed system to 
+                    improve uptime across various operating systems and network nodes. I architected, designed, and helped implement multiple models in Python, C++, and MATLAB.
+                    I worked on Pub/Sub models used by the Navy M&S community as part of large testbeds. My work vastly improved analyst performance, reducing data generation and extraciton
+                    by 98% and more than halving analysis times. I was also the lead database administrator and lead programmer on the software used for analysis of data on the team.
+                    I built a large, extensible library that ran models, stored and retrieved data, munged/merged data, and produced metrics and results for quick turnaround analysis.`,
+      image: 'assets/sew.png',
+      website: 'https://www.jhuapl.edu/OurWork/AirandMissileDefense',
+    },
+    {
+      title: 'Applied Physics Lab',
+      subtitle: 'Mission Planning Lead',
+      description: `Led a small team of 6 on implementing a React/Electron app. This standalone software would make our modeling and analysis results accessible to the sailor 
+                  to help plan missions and engagements for various scenarios. In this role, I ensured that our backend and frontend were aligned, led review sessions with sailors
+                  to make our UX more usable, and built various components in the React app. In addition to the front-end work, I worked with the Navy sponsors to drive tactics for the SLQ(v)7 system deployment.
+                  `,
       image: 'assets/sew.png',
       website: 'https://www.jhuapl.edu/OurWork/AirandMissileDefense',
     },
@@ -54,6 +67,16 @@ const FrontendProjects = {
   'name': 'Frontend',
   projects: [
     {
+      title: 'Applied Physics Lab',
+      subtitle: 'Mission Planning Lead',
+      description: `Led a small team of 6 on implementing a React/Electron app. This standalone software would make our modeling and analysis results accessible to the sailor 
+                  to help plan missions and engagements for various scenarios. In this role, I ensured that our backend and frontend were aligned, led review sessions with sailors
+                  to make our UX more usable, and built various components in the React app. In addition to the front-end work, I worked with the Navy sponsors to drive tactics for the SLQ(v)7 system deployment.
+                  `,
+      image: 'assets/sew.png',
+      website: 'https://www.jhuapl.edu/OurWork/AirandMissileDefense',
+    },
+    {
       title: 'Personal Website',
       subtitle: 'This website, built entirely from scratch in ReactJS',
       description: 'I built this website, with minimal libraries (no bootstrap!) to practice my ReactJS and create an interactive resume. I believe it speaks for itself, so look around! ',
@@ -84,13 +107,16 @@ const DataScienceProjects = {
   name: 'Data Engineering',
   projects: [
     {
-      title: 'John Hopkins University - Applied Physics Laboratory',
-      subtitle: 'Intern: Software Developer for Testing and Evaluation',
-      description: `As an intern on a testing and evaluation team, I automated the workflow to optimize the data intake of large raw datasets. The datasets were 
-                    parsed, organized, filtered, cleaned, munged, then output into an easily readable solution for downstream analysis. It was built in Python, 
-                    extensively utilizing Pandas and Dask. This data extracter reduced intake time by more than 60% and gave valuable insights into the team. In my role,
-                    I also allowed for novel datasets to be extracted, improving the ability of the team to work with the data provided. After extraction, I also worked 
-                    on improving storage solutions, prototyping a database system in MySQL.`,
+      title: 'Applied Physics Lab',
+      subtitle: 'Modeling and Simulation Lead & Lead Data Engineer',
+      description: `Lead an agile team of 20 for modeling and simulation of the AN/SLQ(v)7 team along with smaller teams of 2-4 for analyses
+                    of live data and simulation data. In my leadership role, I created task plans, financial plans, and staff plans driven by sponsor goals.
+                    I worked on software in Python, C++, MATLAB, and Fortran along with PostgreSQL, MongoDB, MySQL, and Microsoft SQL Server as persistence layers. 
+                    Seeing the various databases, I was able to migrate the team to a unified persistence layer based on PostgresSQL using a distributed system to 
+                    improve uptime across various operating systems and network nodes. I architected, designed, and helped implement multiple models in Python, C++, and MATLAB.
+                    I worked on Pub/Sub models used by the Navy M&S community as part of large testbeds. My work vastly improved analyst performance, reducing data generation and extraciton
+                    by 98% and more than halving analysis times. I was also the lead database administrator and lead programmer on the software used for analysis of data on the team.
+                    I built a large, extensible library that ran models, stored and retrieved data, munged/merged data, and produced metrics and results for quick turnaround analysis.`,
       image: 'assets/sew.png',
       website: 'https://www.jhuapl.edu/OurWork/AirandMissileDefense',
     },

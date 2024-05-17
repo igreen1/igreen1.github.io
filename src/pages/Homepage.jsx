@@ -91,14 +91,14 @@ const About = () => {
   })
 
   const AboutMe = [
-    `I'm Ian. I'm pursuing two degrees: a B.S. in Computer Science with a minor in Applied Mathematics
-    and a B.S.E. in Electrical Engineering with a Computer Engineering emphasis with a minor in Pure Mathematics. I work in the Bioinformatics Lab and Cubesat Lab on campus`,
-    `Beyond my majors and research, I strive to incorporate service into my life.
-    Through an on-campus service org, Alpha Sigma Nu honor society, and Tau Beta Pi honor society, I perform upwards of 50 hours of service a semester.`,
-    `In my freetime, I am usually found doing some outdoor activities - I love kayaking, hiking, and bouldering. My current goal is to visit every national park in the next ten years.`,
-
+    `I'm Ian. I'm pursuing my M.S. in Computer Science and have two bachelor degrees in CS and Electrical Engineering (EECS!).
+    I work in data analysis and modeling and simulation projects, primarily as a project or task lead. Though, despite my leadership
+    I still contribute as an individual contributor on a variety of projects in Python, C++, MATLAB as well as working on our database
+    in SQL and Mongo.`,
+    `Beyond my work and school, I am a big skiier and outdoor enthusiast. I spend most of my weekends in the mountains or in my own garden
+    (unfortunately, I haven't yet learned how to get a green thumb).`
+    
   ]
-
 
 
   return (
