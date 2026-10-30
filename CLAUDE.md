@@ -14,7 +14,6 @@ Ian Green's personal résumé site, served at iangreen.dev. It is a frontend-onl
 npm run dev        # Vite dev server (http://localhost:5173)
 npm run build      # tsc -b (type-check only, noEmit) then vite build → dist/
 npm run preview    # serve dist/ (port 4173)
-npm run deploy     # predeploy builds, then gh-pages pushes dist/ to the gh-pages branch
 ```
 
 There are no tests and no linter. `npm run build` is the correctness check: `tsconfig.json` is strict, with `noUnusedLocals` and `noUnusedParameters` enabled.
@@ -35,4 +34,4 @@ There are no tests and no linter. `npm run build` is the correctness check: `tsc
 
 ## Deployment
 
-The site deploys to GitHub Pages with a custom domain. `public/CNAME` must stay in place, and `vite.config.ts` uses `base: '/'`. Static assets in `public/assets/` are referenced by absolute paths such as `/assets/...`.
+`.github/workflows/deploy.yml` builds on every push to `main` (or a manual run) and publishes `dist/` with `actions/deploy-pages`. There is no local deploy command. The repo's Pages source must be set to "GitHub Actions", with the custom domain `iangreen.dev` set in the repo settings. `public/CNAME` must stay in place, and `vite.config.ts` uses `base: '/'` because the site is served from the domain root. Static assets in `public/assets/` are referenced by absolute paths such as `/assets/...`.
