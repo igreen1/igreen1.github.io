@@ -18,11 +18,13 @@ Images and the résumé PDF are in `public/assets/`. To update the résumé, add
 
 ## Deploy (GitHub Pages)
 
-`public/CNAME` keeps the custom domain `iangreen.dev`.
+Every push to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes `dist/` to GitHub Pages at https://iangreen.dev. You can also start it by hand from the Actions tab.
 
-```sh
-npm run deploy     # builds, then pushes dist/ to the gh-pages branch
-```
+One-time repo setup:
+1. **Settings → Pages → Build and deployment → Source:** choose **GitHub Actions**.
+2. **Settings → Pages → Custom domain:** enter `iangreen.dev` and turn on **Enforce HTTPS**.
+
+`public/CNAME` also contains `iangreen.dev`.
 
 ## Theme notes
 
