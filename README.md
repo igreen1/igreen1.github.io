@@ -32,3 +32,7 @@ One-time repo setup:
 - Experience hangs off a chairlift cable; an altimeter on wide screens counts elevation down as you scroll.
 - Snowfall can be toggled from the nav. The choice is remembered, and it's off by default for visitors who prefer reduced motion.
 - Light and dark mode follow the visitor's system setting.
+
+## Dependency updates
+
+Dependabot (`.github/dependabot.yml`) opens weekly pull requests: one grouped PR for npm minor and patch updates, a separate PR for each major version, and one for GitHub Actions. `.github/workflows/ci.yml` builds every pull request, so only merge updates whose check passes.
